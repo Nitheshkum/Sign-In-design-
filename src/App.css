@@ -1,38 +1,193 @@
-.App {
-  text-align: center;
+body,
+html {
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
+.container-fluid {
+  padding: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.img-fluid {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 580px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+.login-form .form-group.label {
+  font-weight: 400;
+}
+
+.login-form .btn {
+  border-radius: 30px;
+  width: 100%;
+}
+
+.login-form .btn-outline-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 14px;
+  height: 55px;
+  padding: 12px 24px;
+  gap: 8px;
+  border-radius: 21px !important;
+  border: 1px solid rgba(98, 98, 98, 1);
+}
+.login-form .btn-outline-secondary:hover {
+  background: rgba(255, 255, 255, 1); /* Ensure background stays the same */
+  color: rgba(98, 98, 98, 1); /* Ensure text color stays the same */
+  border: 1px solid rgba(98, 98, 98, 1); /* Ensure border color stays the same */
+  box-shadow: none; /* Remove any box-shadow effect */
+}
+
+
+.login-form .bi-fingerprint {
+  font-size: 1.95rem; /* Adjust this value as needed */
+}
+.logo {
+  width: 339px;
+  height: 153px;
+  opacity: 1;
+}
+
+.btn-primary {
+  height: 50px;
+  padding: 12px 24px;
+  gap: 8px;
+  border-radius: 21px !important;
+  background: rgba(63, 162, 246, 1) !important;
+  width: 100%;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.form-group small.form-text {
+  display: block;
+  margin-top: 5px;
+  color: #6c757d;
+}
+
+.form-group .form-control {
+  padding: 24px;
+  border: 1px solid rgba(98, 98, 98, 1);
+}
+
+.form-group .form-control:focus {
+  outline: none; 
+  box-shadow: none; 
+  border: 1px solid rgba(98, 98, 98, 1);
+}
+
+.form-group small.text-right {
+  float: right;
+}
+
+.position-relative .placeholder-text {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #6c757d;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.form-group.mb-4 {
+  margin-bottom: 1.5rem; 
+}
+
+/* Styles for the "Forgot?" link */
+.form-group small.form-text a {
+  text-decoration: none; /* Remove underline */
+  color: black; /* Change color to black */
+}
+
+.form-group small.form-text a:hover {
+  color: #000; /* Ensure color stays black on hover */
+}
+
+.text-center.mt-4 p {
+  margin-top: 1.5rem;
+  font-size: 18px;
+  color: #000;
+}
+
+.text-center.mt-4 a {
+  color: #000;
+  text-decoration: none; /* Remove underline */
+  font-weight: 600; /* Make the link text bold */
+}
+
+.text-center.mt-4 a:hover {
+  color: #000; /* Ensure link stays black on hover */
+  text-decoration: underline; /* Add underline on hover for emphasis */
+}
+.fingerprint-icon {
+  font-size: 1rem; /* Base size for icon */
+  transform: scale(1.9); /* Scale up by 1.5 times */
+  margin-right: 8px; /* Space between icon and text */
+  display: inline-block; /* Ensure proper alignment */
+}
+
+
+
+
+/* Additional media queries for better responsiveness */
+@media (max-width: 767.98px) {
+  .container-fluid {
+    position: static;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .col-md-6 {
+    width: 100%;
+    padding: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  .d-none.d-md-block {
+    display: none !important;
+  }
+
+  .login-form {
+    width: 90%;
+    max-width: 100%;
+    padding: 20px;
+    margin: auto;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+
+  .btn-outline-secondary {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+
+  .form-control {
+    padding: 10px;
+  }
+
+  .logo {
+    width: 200px;
+    height: auto;
+  }
+
+  .h2 {
+    font-size: 1.5rem;
   }
 }
